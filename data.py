@@ -104,7 +104,7 @@ class saicDataset(Dataset):
                 
         
     def __len__(self):
-        return len(self.datapath['sample'])
+        return len(self.datapath['sample'][:100])
     
    
 if __name__ == '__main__':

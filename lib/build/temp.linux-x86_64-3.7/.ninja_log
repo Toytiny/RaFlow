@@ -1,0 +1,10 @@
+# ninja log v5
+0	4350	1656094790444347270	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/sampling.o	57842394769b7440
+1	4370	1656094790464347340	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/group_points.o	e8ef2f7cd6d0c0ca
+1	4398	1656094790492347437	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/interpolate.o	ad111a7e8c27c2dc
+0	4843	1656094790936348977	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/ball_query.o	547988897fc8da7d
+1	11543	1656094797636372221	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/group_points_gpu.o	ccf07c0fe2c6c6dc
+1	11615	1656094797704372457	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/ball_query_gpu.o	d513ebc94d453f35
+2	11615	1656094797704372457	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/interpolate_gpu.o	747a0c1e2816286f
+2	12063	1656094798152374013	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/sampling_gpu.o	30cb40e9a4ae9885
+2	15254	1656094801344385094	/home/fangqiang/RaFlow_pub/lib/build/temp.linux-x86_64-3.7/src/pointnet2_api.o	d00addb321c94dd4
