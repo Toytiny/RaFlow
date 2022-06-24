@@ -1,0 +1,30 @@
+exp_name: raflow_pretrain
+model: raflow
+
+## training 
+num_points: 256
+batch_size: 32
+val_batch_size: 16
+epochs: 50
+lr: 0.001
+decay_epochs: 1
+decay_rate: 0.9
+
+
+## device
+cuda_device: '0,1'
+no_cuda: False
+seed: 1234 
+num_workers: 8
+
+## dataset
+eval: True
+dataset: saicDataset
+dataset_path: /home/fangqiang/data/SAIC_radar/samples_old/
+aug: True
+vis: False
+
+
+## checkpoint
+load_checkpoint: False
+model_path: ''
