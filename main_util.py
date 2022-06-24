@@ -148,18 +148,6 @@ def eval_scene_flow(pc, pred, labels, mask):
     
     return sf_metric
 
-
-def eval_trans_RPE(gt_trans,rigid_trans):
-    
-    ## Use the RPE to evaluate the prediction
-    gt_trans = gt_trans.cpu().numpy()
-    rigid_trans = rigid_trans.cpu().detach().numpy()
-    error_sf=calculate_rpe_vector(gt_trans,rigid_trans)
-    trans_error_sf=calc_rpe_error(error_sf, error_type='translation_part')
-    rot_error_sf=calc_rpe_error(error_sf, error_type='rotation_angle_deg')
-    pose_metric = {'RTE': np.array(trans_error_sf).mean(), 'RRE': np.array(rot_error_sf).mean()}
-    
-    return pose_metric
     
 def eval_motion_seg(pre, gt):
     

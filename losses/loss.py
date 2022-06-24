@@ -1,5 +1,4 @@
 
-import sys
 import torch
 from utils import *
 from utils.model_utils import *
@@ -71,7 +70,7 @@ def computeWeightedSmooth(pc1, pred_flow, alpha=0.5):
   
     grouped_flow = index_points_group(pred_flow, kidx) 
     diff_flow = (npoints*weights*torch.norm(grouped_flow - pred_flow.unsqueeze(2), dim = 3)).sum(dim = 2) 
-    #diff_flow = (torch.norm(grouped_flow - pred_flow.unsqueeze(2), dim = 3)).sum(dim = 2) /num_nb
+   
     return diff_flow
 
 

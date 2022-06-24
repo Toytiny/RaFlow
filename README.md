@@ -25,35 +25,35 @@ If you found our work useful for your research, please consider citing:
 
 More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md)
 
-<img src="doc/qual.png" width="80%">
+<img src="doc/qual.png" width="65%">
 
 ## Installation
 
-> Note: the code in this repo has been tested on Ubuntu 18.04 with Python 3.7, CUDA 11.1, PyTorch 1.7. It may work for other setups, but has not been tested.
+> Note: the code in this repo has been tested on Ubuntu 16.04/18.04 with Python 3.7, CUDA 11.1, PyTorch 1.7. It may work for other setups, but has not been tested.
 
-Please follow the steps below to build up your environment.
+Please follow the steps below to build up your environment. Make sure that you correctly install GPU drive and CUDA before setting up.
 
-Clone the repository to local
+a. Clone the repository to local
 
 ```
 git clone https://github.com/Toytiny/RaFlow
 ```
 
-Set up a new environment with Anaconda
+b. Set up a new environment with Anaconda
 
 ```
 conda create -n YOUR_ENV_NAME python=3.7
 source activate YOUR_ENV_NAME
 ```
 
-Install common dependicies
+c. Install common dependicies
 
 ```
 conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt
 ```
 
-Install [PointNet++](https://github.com/sshaoshuai/Pointnet2.PyTorch) library for basic point cloud operation
+d. Install [PointNet++](https://github.com/sshaoshuai/Pointnet2.PyTorch) library for basic point cloud operation
 
 ```
 cd lib
@@ -65,7 +65,7 @@ cd ..
 
 Our trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides our code, we also provide a few test, training and valiation data under `./demo_data/`.
 
-For evaluation on test data, please run
+a. For evaluation on test data, please run
 
 ```
 python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
@@ -73,7 +73,7 @@ python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretra
 
 The results visualization at bird-eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
 
-For training new model, please run
+b. For training new model, please run
 
 ```
 python main.py --dataset_path ./demo_data/ --exp_name raflow_new
