@@ -1,4 +1,0 @@
-{'exp_name': 'raflow_train', 'model': 'raflow', 'num_points': 256, 'batch_size': 32, 'val_batch_size': 16, 'epochs': 50, 'lr': 0.001, 'decay_epochs': 1, 'decay_rate': 0.9, 'cuda_device': '0,1', 'no_cuda': False, 'seed': 1234, 'num_workers': 8, 'eval': False, 'dataset': 'saicDataset', 'dataset_path': '/home/fangqiang/data/SAIC_radar/samples_old/', 'aug': True, 'vis': True, 'load_checkpoint': False, 'model_path': ''}
-train: 10068
-val: 1766
-==epoch: 0, learning rate: 0.001000==

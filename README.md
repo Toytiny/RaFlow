@@ -3,7 +3,7 @@
 
 [![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub Stars](https://img.shields.io/github/stars/Toytiny/RaFlow?style=social)](https://github.com/Toytiny/RaFlow) 
 
-This repository is the official implementation of [**RaFlow**](https://arxiv.org/abs/2203.01137) (IEEE RA-L'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Video]](https://youtu.be/5_iJCZytrxo)
+This repository is the official implementation of RaFlow (IEEE RA-L'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://arxiv.org/abs/2203.01137) [[Video]](https://youtu.be/5_iJCZytrxo)
 
 ![](doc/pipeline.png)
 
@@ -60,6 +60,28 @@ cd lib
 python setup.py install
 cd ..
 ```
+
+## Running
+
+Our trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides our code, we also provide a few test, training and valiation data under `./demo_data/`.
+
+For evaluation on test data, please run
+
+```
+python main.py --eval True --vis True --dataset_path ./demo_data/ --exp_name raflow_pretrain
+```
+
+The results visualization at bird-eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
+
+For training new model, please run
+
+```
+python main.py --dataset_path ./demo_data/ --exp_name raflow_new
+```
+
+Experiment configuration can be modified at `./configs.yaml`.
+
+Since only limited data is provided in this repository, we recommend the users collect their own data or use recent public datasets for large-scale training and test.
 
 
 ## Acknowledgments
