@@ -68,7 +68,7 @@ Our trained model can be found at `./checkpoints/raflow_pretrain/models`. Beside
 For evaluation on test data, please run
 
 ```
-python main.py --eval True --vis True --dataset_path ./demo_data/ --exp_name raflow_pretrain
+python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
 ```
 
 The results visualization at bird-eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
@@ -81,7 +81,7 @@ python main.py --dataset_path ./demo_data/ --exp_name raflow_new
 
 Experiment configuration can be modified at `./configs.yaml`.
 
-Since only limited data is provided in this repository, we recommend the users collect their own data or use recent public datasets for large-scale training and test.
+Since only limited data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and test.
 
 
 ## Acknowledgments
