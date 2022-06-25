@@ -32,12 +32,12 @@ a. Scene Flow
 
 More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md).
 
-<img src="doc/qual.png" width="75%">
+<img src="doc/qual.png" width="80%">
 
 
 b. Motion Segmentation
 
-<img src="doc/motion_seg.png" width="65%">
+<img src="doc/motion_seg.png" width="80%">
 
 ## Installation
 
