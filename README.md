@@ -25,9 +25,10 @@ If you found our work useful for your research, please consider citing:
 
 a. Scene Flow
 
-<img src="doc/qual.png" width="65%">
-
 More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md).
+
+<img src="doc/qual.png" width="75%">
+
 
 b. Motion Segmentation
 
