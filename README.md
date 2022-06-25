@@ -28,14 +28,15 @@ If you found our work useful for your research, please consider citing:
 
 ## Visualization
 
-a. Scene Flow
+#### a. Scene Flow
 
 More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md).
 
 <img src="doc/qual.png" width="80%">
 
 
-b. Motion Segmentation
+#### b. Motion Segmentation
+
 
 <img src="doc/motion_seg.png" width="80%">
 
@@ -45,27 +46,27 @@ b. Motion Segmentation
 
 Please follow the steps below to build up your environment. Make sure that you correctly install GPU driver and CUDA before setting up.
 
-a. Clone the repository to local
+#### a. Clone the repository to local
 
 ```
 git clone https://github.com/Toytiny/RaFlow
 ```
 
-b. Set up a new environment with Anaconda
+#### b. Set up a new environment with Anaconda
 
 ```
 conda create -n YOUR_ENV_NAME python=3.7
 source activate YOUR_ENV_NAME
 ```
 
-c. Install common dependicies
+#### c. Install common dependicies
 
 ```
 conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt
 ```
 
-d. Install [PointNet++](https://github.com/sshaoshuai/Pointnet2.PyTorch) library for basic point cloud operation
+#### d. Install [PointNet++](https://github.com/sshaoshuai/Pointnet2.PyTorch) library for basic point cloud operation
 
 ```
 cd lib
@@ -77,7 +78,7 @@ cd ..
 
 Our trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides our code, we also provide a few test, training and valiation data under `./demo_data/`.
 
-a. For evaluation on test data, please run
+#### a. For evaluation on test data, please run
 
 ```
 python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
@@ -85,7 +86,7 @@ python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretra
 
 The results visualization at bird-eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
 
-b. For training new model, please run
+#### b. For training new model, please run
 
 ```
 python main.py --dataset_path ./demo_data/ --exp_name raflow_new
