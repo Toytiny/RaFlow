@@ -23,15 +23,21 @@ If you found our work useful for your research, please consider citing:
 
 ## Visualization
 
-More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md)
+a. Scene Flow
 
 <img src="doc/qual.png" width="65%">
+
+More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md).
+
+b. Motion Segmentation
+
+<img src="doc/motion_seg.png" width="65%">
 
 ## Installation
 
 > Note: the code in this repo has been tested on Ubuntu 16.04/18.04 with Python 3.7, CUDA 11.1, PyTorch 1.7. It may work for other setups, but has not been tested.
 
-Please follow the steps below to build up your environment. Make sure that you correctly install GPU drive and CUDA before setting up.
+Please follow the steps below to build up your environment. Make sure that you correctly install GPU driver and CUDA before setting up.
 
 a. Clone the repository to local
 
