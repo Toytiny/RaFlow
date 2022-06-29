@@ -3,7 +3,7 @@
 
 [![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub Stars](https://img.shields.io/github/stars/Toytiny/RaFlow?style=social)](https://github.com/Toytiny/RaFlow) 
 
-This repository is the official implementation of RaFlow (IEEE RA-L'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://arxiv.org/abs/2203.01137) [[Video]](https://youtu.be/5_iJCZytrxo)
+This repository is the official implementation of RaFlow (IEEE RA-L'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://ieeexplore.ieee.org/document/9810356) [[Video]](https://youtu.be/5_iJCZytrxo)
 
 ![](doc/pipeline.png)
 
@@ -19,10 +19,12 @@ If you found our work useful for your research, please consider citing:
 
 ```
 @article{ding2022raflow,
-  title={Self-Supervised Scene Flow Estimation with 4-D Automotive Radar},
-  author={Ding, Fangqiang and Pan, Zhijun and Deng, Yimin and Deng, Yiming and Chris Xiaoxuan Lu},
-  journal={IEEE Robotics and Automation Letters},
-  year={2022}
+  author={Ding, Fangqiang and Pan, Zhijun and Deng, Yimin and Deng, Jianning and Lu, Chris Xiaoxuan},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Self-Supervised Scene Flow Estimation With 4-D Automotive Radar}, 
+  year={2022},
+  pages={1-8},
+  doi={10.1109/LRA.2022.3187248}}
 }
 ```
 
