@@ -104,4 +104,5 @@ This repository is based on the following codebases.
 
 * [PointPWC](https://github.com/DylanWusee/PointPWC)
 * [FlowNet3D_PyTorch](https://github.com/hyangwinter/flownet3d_pytorch)
+* [PointNet++_PyTorch](https://github.com/sshaoshuai/Pointnet2.PyTorch)
 
