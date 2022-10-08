@@ -198,7 +198,6 @@ def main(io_args):
                     num_workers=args.num_workers, batch_size=args.batch_size, shuffle=True, drop_last=True)
             val_loader = DataLoader(saicDataset(args=args, textio = textio, root = args.dataset_path, partition='val'),
                     num_workers=args.num_workers,batch_size=args.val_batch_size, shuffle=False, drop_last=False)
-                    
     if args.dataset == 'vodDataset':
         if args.eval:
             test_loader = DataLoader(vodDataset(args=args, textio = textio, root = args.dataset_path, partition='test'),

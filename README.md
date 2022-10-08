@@ -96,7 +96,7 @@ cd ..
 
 The main experiments are conducted on our inhouse dataset. The trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
 
-**For evaluation on inhouse test data, please run**
+For evaluation on inhouse test data, please run
 
 ```
 python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
@@ -104,7 +104,7 @@ python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretra
 
 The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
 
-**For training new model, please run**
+For training new model, please run
 
 ```
 python main.py --dataset_path ./demo_data/ --exp_name raflow_new

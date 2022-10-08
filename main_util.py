@@ -92,7 +92,7 @@ def get_carterian_res(pc, sensor, args):
             phi_res = 1.6 *np.pi/180  # radian
         if args.dataset == 'vodDataset': # ZF FRGen21
             r_res: 0.2 # m
-            theta_res: 1.5 * np.pi/180, # radian
+            theta_res: 1.5 * np.pi/180 # radian
             phi_res: 1.5 *np.pi/180  # radian
                 
         
