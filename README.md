@@ -7,6 +7,20 @@ This repository is the official implementation of RaFlow (IEEE RA-L'22 & IROS'22
 
 ![](doc/pipeline.png)
 
+
+## News
+
+[2022-10-08] We run our method on the publicly available [View-of-Delft (VoD)](https://github.com/tudelft-iv/view-of-delft-dataset) dataset. A video demo can be found at [Video Demo](#video-demo). Please see [Running](#running) for how to experiment with the VoD dataset.
+
+## Video Demo
+
+A short video demo showing our qualitive results on the view-of-delft dataset (click the figure below):
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=R8r3lrkicJ0"><img src="doc/demo.png" width="65%" alt="Click the figure below to see the video"></a>
+</div>
+
+
+
 ## Abstract
 
 Scene flow allows autonomous vehicles to reason about the arbitrary motion of multiple independent objects which is the key to long-term mobile autonomy. While estimating the scene flow from LiDAR has progressed recently, it remains largely unknown how to estimate the scene flow from a 4-D radar - an increasingly popular automotive sensor for its robustness against adverse weather and lighting conditions. Compared with the LiDAR point clouds, radar data are drastically sparser, noisier and in much lower resolution. Annotated datasets for radar scene flow are also in absence and costly to acquire in the real world. These factors jointly pose the radar scene flow estimation as

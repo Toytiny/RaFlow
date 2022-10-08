@@ -167,6 +167,7 @@ def main(io_args):
     args.vis = io_args.vis
     args.dataset_path = io_args.dataset_path
     args.exp_name = io_args.exp_name
+    args.model = io_args.model
 
     # CUDA settings
     torch.cuda.empty_cache()
@@ -214,6 +215,7 @@ if __name__ == '__main__':
     parser.add_argument('--vis', action = 'store_true')
     parser.add_argument('--dataset_path', type= str, default = 'demo_data/')
     parser.add_argument('--exp_name', type = str, default = 'raflow_pretrain')
+    parser.add_argument('--model', type = str, default = 'raflow')
     args = parser.parse_args()
    
     main(args)
