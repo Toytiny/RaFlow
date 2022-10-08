@@ -23,6 +23,7 @@ from main_util import train_one_epoch, plot_loss_epoch
 from main_util import eval_scene_flow, eval_motion_seg
 from vis_util import *
 
+
 class IOStream:
     def __init__(self, path):
         self.f = open(path, 'a')
@@ -42,7 +43,7 @@ def _init_(args):
     if not os.path.exists('checkpoints/' + args.exp_name):
         os.makedirs('checkpoints/' + args.exp_name)
     if not os.path.exists('checkpoints/' + args.exp_name + '/' + 'models'):
-        os.makedirs('checkpoints/' + args.exp_name + '/' + 'models')
+         os.makedirs('checkpoints/' + args.exp_name + '/' + 'models')
     os.system('cp main.py checkpoints' + '/' + args.exp_name + '/' + 'main.py.backup')
     os.system('cp data.py checkpoints' + '/' + args.exp_name + '/' + 'data.py.backup')
 
@@ -76,7 +77,7 @@ def test(args, net, test_loader, textio):
  
         with torch.no_grad():
 
-            if args.model=='raflow':
+            if args.model=='raflow' or args.model == 'raflow_vod':
                 _, pred_f, _, pred_m = net(pc1, pc2, ft1, ft2, interval)
 
             ## use estimated scene to warp point cloud 1 
@@ -93,7 +94,7 @@ def test(args, net, test_loader, textio):
                 sf_metric[metric] += batch_size * batch_res[metric]
                 
             ## evaluate the motion segmentation precision and recall
-            if args.model == 'raflow':
+            if args.model=='raflow' or args.model == 'raflow_vod':
                 seg_res = eval_motion_seg(pred_m, mask)
                 for metric in seg_res:
                     seg_metric[metric] += batch_size * seg_res[metric]
@@ -104,7 +105,7 @@ def test(args, net, test_loader, textio):
     ## print scene flow evaluation results
     for metric in sf_metric:
         textio.cprint('###The mean {}: {}###'.format(metric, sf_metric[metric]/num_pcs))
-    if args.model == 'raflow':
+    if args.model=='raflow' or args.model == 'raflow_vod':
         ## print motion seg evaluation results
         for metric in seg_metric:
             textio.cprint('###The mean {}: {}###'.format(metric, seg_metric[metric]/num_pcs))
@@ -225,7 +226,7 @@ if __name__ == '__main__':
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--vis', action = 'store_true')
     parser.add_argument('--dataset_path', type= str, default = 'demo_data/')
-    parser.add_argument('--exp_name', type = str, default = 'raflow_pretrain')
+    parser.add_argument('--exp_name', type = str, default = 'raflow')
     parser.add_argument('--model', type = str, default = 'raflow')
     parser.add_argument('--dataset', type = str, default = 'saicDataset')
     args = parser.parse_args()

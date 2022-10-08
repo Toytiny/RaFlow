@@ -1,4 +1,4 @@
-exp_name: raflow_pretrain
+exp_name: raflow
 model: raflow
 
 ## training 

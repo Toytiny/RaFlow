@@ -19,7 +19,7 @@ class RaFlow_VoD(nn.Module):
         
         super(RaFlow_VoD,self).__init__()
         
-        self.rigid_thres = args.rigid_thres
+        self.rigid_thres = 0.15
         self.rigid_pcs = 0.25
         self.npoints = args.num_points
         

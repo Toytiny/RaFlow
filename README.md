@@ -92,17 +92,17 @@ cd ..
 
 ## Running
 
-### a. running on our inhouse data (demo)
+### a. Inhouse data 
 
-The main experiments are conducted on our inhouse dataset. The trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
+The main experiments are conducted on our inhouse dataset. The trained model can be found at `./checkpoints/raflow/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
 
 For evaluation on inhouse test data, please run
 
 ```
-python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
+python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow
 ```
 
-The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
+The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow/test_vis_2d/`.
 
 For training new model, please run
 
@@ -114,7 +114,7 @@ Experiment configuration can be further modified at `./configs.yaml`.
 
 Since only limited inhouse data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and test.
 
-### b. running on VoD data 
+### b. VoD data
 
 We also run our method on the public View-of-Delft (VoD) dataset. To start, please first request the access from their [official webiste](https://github.com/tudelft-iv/view-of-delft-dataset) and download their data and annotations. 
 

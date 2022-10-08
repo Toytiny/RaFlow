@@ -19,7 +19,7 @@ def train_one_epoch(args, net, train_loader, opt, mode):
     total_loss = 0
   
 
-    if args.model=='raflow':
+    if args.model=='raflow' or args.model == 'raflow_vod':
         loss_items={
             'Loss': [],
             'chamferLoss': [],
@@ -44,7 +44,7 @@ def train_one_epoch(args, net, train_loader, opt, mode):
         vel1 = ft1[:,0]
 
         
-        if args.model=='raflow':
+        if args.model=='raflow' or args.model == 'raflow_vod':
             _, agg_f, _,_ = net(pc1, pc2, ft1, ft2, interval)
             loss, items = computeloss(pc1,pc2, agg_f, vel1,interval, args) 
         

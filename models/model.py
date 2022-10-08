@@ -4,8 +4,8 @@ import numpy as np
 import os
 import torch.nn.functional as F
 from utils.model_utils import *
-from .raflow import *
-
+from .raflow_vod import RaFlow_VoD
+from .raflow import RaFlow
 
 def weights_init(m):
     classname=m.__class__.__name__
@@ -17,10 +17,13 @@ def weights_init(m):
 
 def init_model(args):
     
-    if args.model in ['raflow']:
+    if args.model in ['raflow', 'raflow_vod']:
 
         if args.model == 'raflow':
             net = RaFlow(args).cuda()
+            net.apply(weights_init)  
+        if args.model == 'raflow_vod':
+            net = RaFlow_VoD(args).cuda()
             net.apply(weights_init)  
             
         if args.eval or args.load_checkpoint:
