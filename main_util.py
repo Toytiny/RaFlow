@@ -82,13 +82,19 @@ def plot_loss_epoch(train_items_iter, args, epoch):
  
     
 
-def get_carterian_res(pc, sensor):
+def get_carterian_res(pc, sensor, args):
 
     ## measure resolution for r/theta/phi
-    if sensor == 'radar': # LRR30
-        r_res = 0.2 # m
-        theta_res = 1 * np.pi/180 # radian
-        phi_res = 1.6 *np.pi/180  # radian
+    if sensor == 'radar': 
+        if args.dataset == 'saicDataset': # LRR30
+            r_res = 0.2 # m
+            theta_res = 1 * np.pi/180 # radian
+            phi_res = 1.6 *np.pi/180  # radian
+        if args.dataset == 'vodDataset': # ZF FRGen21
+            r_res: 0.2 # m
+            theta_res: 1.5 * np.pi/180, # radian
+            phi_res: 1.5 *np.pi/180  # radian
+                
         
     if sensor == 'lidar': # HDL-64E
         r_res = 0.04 # m
@@ -120,7 +126,7 @@ def get_carterian_res(pc, sensor):
     
     return xyz_res
         
-def eval_scene_flow(pc, pred, labels, mask):
+def eval_scene_flow(pc, pred, labels, mask, args):
     
     pc = pc.cpu().numpy()
     pred = pred.cpu().detach().numpy()
@@ -131,9 +137,9 @@ def eval_scene_flow(pc, pred, labels, mask):
     gtflow_len = np.sqrt(np.sum(labels*labels, 2) + 1e-20) 
 
     ## obtain x y z measure resolution for each point (radar lidar)
-    xyz_res_r = get_carterian_res(pc, 'radar') 
+    xyz_res_r = get_carterian_res(pc, 'radar', args) 
     res_r = np.sqrt(np.sum(xyz_res_r,2)+1e-20)
-    xyz_res_l = get_carterian_res(pc, 'lidar') 
+    xyz_res_l = get_carterian_res(pc, 'lidar', args) 
     res_l = np.sqrt(np.sum(xyz_res_l,2)+1e-20)
     
     ## calcualte Resolution Normalized Error

@@ -87,7 +87,7 @@ def test(args, net, test_loader, textio):
                 visulize_result_2D(pc1, pc2, pc1_warp, num_pcs, vis_path_2D)
                 
             ## evaluate the estimated results using ground truth
-            batch_res = eval_scene_flow(pc1, pred_f.transpose(2,1).contiguous(), gt, mask)
+            batch_res = eval_scene_flow(pc1, pred_f.transpose(2,1).contiguous(), gt, mask, args)
             
             for metric in batch_res:
                 sf_metric[metric] += batch_size * batch_res[metric]
@@ -216,6 +216,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset_path', type= str, default = 'demo_data/')
     parser.add_argument('--exp_name', type = str, default = 'raflow_pretrain')
     parser.add_argument('--model', type = str, default = 'raflow')
+    parser.add_argument('--dataset', type = str, default = 'saicDataset')
     args = parser.parse_args()
    
     main(args)

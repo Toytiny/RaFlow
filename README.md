@@ -12,14 +12,6 @@ This repository is the official implementation of RaFlow (IEEE RA-L'22 & IROS'22
 
 [2022-10-08] We run our method on the publicly available [View-of-Delft (VoD)](https://github.com/tudelft-iv/view-of-delft-dataset) dataset. A video demo can be found at [Video Demo](#video-demo). Please see [Running](#running) for how to experiment with the VoD dataset.
 
-## Video Demo
-
-A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure below):
-<div align="center">
-  <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
-</div>
-
-
 
 ## Abstract
 
@@ -41,6 +33,14 @@ If you found our work useful for your research, please consider citing:
   doi={10.1109/LRA.2022.3187248}}
 }
 ```
+
+## Video Demo
+
+A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure below):
+<div align="center">
+  <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
+</div>
+
 
 ## Visualization
 
@@ -92,26 +92,47 @@ cd ..
 
 ## Running
 
-Our trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides our code, we also provide a few test, training and valiation data under `./demo_data/`.
+### a. running on our inhouse data (demo)
 
-#### a. For evaluation on test data, please run
+The main experiments are conducted on our inhouse dataset. The trained model can be found at `./checkpoints/raflow_pretrain/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
+
+**For evaluation on inhouse test data, please run**
 
 ```
 python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow_pretrain
 ```
 
-The results visualization at bird-eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
+The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow_pretrain/test_vis_2d/`.
 
-#### b. For training new model, please run
+**For training new model, please run**
 
 ```
 python main.py --dataset_path ./demo_data/ --exp_name raflow_new
 ```
 
-Experiment configuration can be modified at `./configs.yaml`.
+Experiment configuration can be further modified at `./configs.yaml`.
 
-Since only limited data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and test.
+Since only limited inhouse data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and test.
 
+### b. running on VoD data 
+
+We also run our method on the public View-of-Delft (VoD) dataset. To start, please first request the access from their [official webiste](https://github.com/tudelft-iv/view-of-delft-dataset) and download their data and annotations. 
+
+Before experiments, please put your preprocessed scene flow samples under `./vod_data/` and split them into training, validation and testing sets. 
+
+Here we provide our trained model under `./checkpoints/raflow_vod/models`. For evaluation on VoD, please run the following code:
+
+```
+python main.py --eval --vis --dataset_path ./vod_data/ --model raflow_vod --exp_name raflow_vod --dataset vodDataset
+```
+
+For training your own model, please run:
+
+```
+python main.py --dataset_path ./vod_data/ --model raflow_vod --exp_name raflow_vod_new --dataset vodDataset
+```
+
+We will release our code for preprocessing the VoD dataset later.
 
 ## Acknowledgments
 This repository is based on the following codebases.  
