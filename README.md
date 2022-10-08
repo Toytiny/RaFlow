@@ -14,9 +14,9 @@ This repository is the official implementation of RaFlow (IEEE RA-L'22 & IROS'22
 
 ## Video Demo
 
-A short video demo showing our qualitive results on the view-of-delft dataset (click the figure below):
+A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure below):
 <div align="center">
-  <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="65%" alt="Click the figure below to see the video"></a>
+  <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
 </div>
 
 
