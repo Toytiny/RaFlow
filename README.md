@@ -1,9 +1,9 @@
 
 # Self-Supervised Scene Flow Estimation with 4-D Automotive Radar  
 
-[![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub Stars](https://img.shields.io/github/stars/Toytiny/RaFlow?style=social)](https://github.com/Toytiny/RaFlow) 
+[![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub](https://img.shields.io/website?label=Project%20Page&up_message=RaFlow&url=https://toytiny.github.io/projects/raflow/raflow.html)](https://toytiny.github.io/projects/raflow/raflow.html)
 
-This repository is the official implementation of RaFlow (IEEE RA-L'22 & IROS'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://ieeexplore.ieee.org/document/9810356) [[Video]](https://youtu.be/5_iJCZytrxo)
+This repository is the official implementation of RaFlow (IEEE RA-L & IROS'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://ieeexplore.ieee.org/document/9810356) [[Video]](https://youtu.be/5_iJCZytrxo)
 
 ![](doc/pipeline.png)
 
@@ -36,7 +36,7 @@ If you found our work useful for your research, please consider citing:
 
 ## Video Demo
 
-A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure below):
+A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure to see):
 <div align="center">
   <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
 </div>
@@ -46,7 +46,7 @@ A short video demo showing our qualitative results on the View-of-Delft dataset 
 
 #### a. Scene Flow
 
-More qualititative results can be found in [[Results Visualization]](/doc/supply_qual.md).
+More qualititative results can be found in [Results Visualization](/doc/supply_qual.md).
 
 <img src="doc/qual.png" width="80%">
 
@@ -94,7 +94,7 @@ cd ..
 
 ### a. Inhouse data 
 
-The main experiments are conducted on our inhouse dataset. The trained model can be found at `./checkpoints/raflow/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
+The main experiments are conducted on our inhouse dataset. Our trained model can be found at `./checkpoints/raflow/models`. Besides, we also provide a few testing, training and valiation data under `./demo_data/` for users to run.
 
 For evaluation on inhouse test data, please run
 
@@ -102,7 +102,7 @@ For evaluation on inhouse test data, please run
 python main.py --eval --vis --dataset_path ./demo_data/ --exp_name raflow
 ```
 
-The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow/test_vis_2d/`.
+The results visualization at bird's eye view (BEV) will be saved under `./checkpoints/raflow/test_vis_2d/`. Experiment configuration can be further modified at `./configs.yaml`.
 
 For training new model, please run
 
@@ -110,17 +110,14 @@ For training new model, please run
 python main.py --dataset_path ./demo_data/ --exp_name raflow_new
 ```
 
-Experiment configuration can be further modified at `./configs.yaml`.
+Since only limited inhouse data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and testing.
 
-Since only limited inhouse data is provided in this repository, we recommend the users to collect their own data or use recent public datasets for large-scale training and test.
 
 ### b. VoD data
 
-We also run our method on the public View-of-Delft (VoD) dataset. To start, please first request the access from their [official webiste](https://github.com/tudelft-iv/view-of-delft-dataset) and download their data and annotations. 
+We also run our method on the public View-of-Delft (VoD) dataset. To start, please first request the access from their [official webiste](https://github.com/tudelft-iv/view-of-delft-dataset) and download their data and annotations. Before experiments, please put your preprocessed scene flow samples under `./vod_data/` and split them into training, validation and testing sets. 
 
-Before experiments, please put your preprocessed scene flow samples under `./vod_data/` and split them into training, validation and testing sets. 
-
-Here we provide our trained model under `./checkpoints/raflow_vod/models`. For evaluation on VoD, please run the following code:
+Here we provide our trained model on the VoD dataset under `./checkpoints/raflow_vod/models`. For evaluating this model on VoD, please run the following code:
 
 ```
 python main.py --eval --vis --dataset_path ./vod_data/ --model raflow_vod --exp_name raflow_vod --dataset vodDataset
