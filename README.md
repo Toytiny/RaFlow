@@ -38,7 +38,7 @@ If you found our work useful for your research, please consider citing:
 
 A short video demo showing our qualitative results on the View-of-Delft dataset (click the figure to see):
 <div align="center">
-  <a href="https://youtu.be/0NfEuH8tD6A"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
+  <a href="https://drive.google.com/file/d/1rTDdiY5hJ1FleN1K7YjnP15MpMebaShb/view?usp=sharing"><img src="doc/demo_cover.png" width="100%" alt="Click the figure below to see the video"></a>
 </div>
 
 
