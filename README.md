@@ -1,7 +1,7 @@
 
 # Self-Supervised Scene Flow Estimation with 4-D Automotive Radar  
 
-[![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub](https://img.shields.io/website?label=Project%20Page&up_message=RaFlow&url=https://toytiny.github.io/projects/raflow/raflow.html)](https://toytiny.github.io/projects/raflow/raflow.html)
+[![arxiv](https://img.shields.io/badge/arXiv-2203.01137-%23B31C1B?style=flat)](https://arxiv.org/abs/2203.01137)  [![ ](https://img.shields.io/youtube/views/5_iJCZytrxo?label=YouTube&style=flat)](https://www.youtube.com/watch?v=5_iJCZytrxo&feature=youtu.be)  [![GitHub](https://img.shields.io/website?label=Project%20Page&up_message=RaFlow&url=https://toytiny.github.io/projects/raflow/raflow.html)](https://toytiny.github.io/publication/22-raflow-ral/index.html)
 
 This repository is the official implementation of RaFlow (IEEE RA-L & IROS'22), a robust method for scene flow estimation on 4-D radar point clouds with self-supervised learning. [[Paper]](https://ieeexplore.ieee.org/document/9810356) [[Video]](https://youtu.be/5_iJCZytrxo)
 
