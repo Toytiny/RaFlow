@@ -10,7 +10,9 @@ This repository is the official implementation of RaFlow (IEEE RA-L & IROS'22), 
 
 ## News
 
-[2022-10-08] We run our method on the publicly available [View-of-Delft (VoD)](https://github.com/tudelft-iv/view-of-delft-dataset) dataset. A video demo can be found at [Video Demo](#video-demo). Please see [Running](#running) for how to experiment with the VoD dataset.
+[2022-10] We run our method on the publicly available [View-of-Delft (VoD)](https://github.com/tudelft-iv/view-of-delft-dataset) dataset. A video demo can be found at [Video Demo](#video-demo). Please see [Running](#running) for how to experiment with the VoD dataset.
+
+[2023-03] Our latest work "Hidden Gems: 4D Radar Scene Flow Learning Using Cross-Modal Supervision" has been accepted by CVPR 2023. Please see [CMFlow](https://github.com/Toytiny/CMFlow) for more details and find out how to run RaFlow on VoD dataset. 
 
 
 ## Abstract
@@ -129,7 +131,7 @@ For training your own model, please run:
 python main.py --dataset_path ./vod_data/ --model raflow_vod --exp_name raflow_vod_new --dataset vodDataset
 ```
 
-We will release our code for preprocessing the VoD dataset later.
+**We provide the instructions on how to run RaFlow on the VoD at the [GETTING_STARTED](https://github.com/Toytiny/CMFlow/blob/master/src/GETTING_STARTED.md) of our CVPR'23 work. Please follow the steps there to run RaFlow or our new method CMFlow.** 
 
 ## Acknowledgments
 This repository is based on the following codebases.  
